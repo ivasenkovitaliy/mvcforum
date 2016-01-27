@@ -674,6 +674,7 @@ namespace MVCForum.Website.Controllers
                             {
                                 // Set last login date
                                 user = MembershipService.GetUser(username);
+
                                 if (user.IsApproved && !user.IsLockedOut && !user.IsBanned)
                                 {
                                     FormsAuthentication.SetAuthCookie(username, model.RememberMe);
